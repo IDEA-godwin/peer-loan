@@ -1,4 +1,5 @@
-import Footer from "@/components/Footer";
+import Footer from "../components/Footer";
+import HomeModule from "../modules/HomeModule";
 import { useEffect, useState } from "react";
 import { useAccount } from "wagmi";
 
@@ -6,6 +7,8 @@ export default function Home() {
     const [userAddress, setUserAddress] = useState("");
     const [isMounted, setIsMounted] = useState(false);
     const { address, isConnected } = useAccount();
+
+    let [currentPage, setCurrentPage] = useState("home")
 
     useEffect(() => {
         setIsMounted(true);
@@ -30,9 +33,14 @@ export default function Home() {
                             Your address: {userAddress}
                         </div>
                     ) : (
-                        <div>No Wallet Connected</div>
+                        <div className="text-sm">No Wallet Connected</div>
                     )}
                 </div>
+                {
+                    currentPage == "home"
+                    &&
+                    <HomeModule />
+                }
             </div>
             <Footer />
         </div>
