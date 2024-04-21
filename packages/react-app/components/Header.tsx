@@ -18,7 +18,7 @@ export default function Header() {
     }, [connect]);
 
     return (
-        <Disclosure as="nav" className="bg-prosperity border-b border-black">
+        <Disclosure as="nav" className="border-b border-black">
             {({ open }) => (
                 <>
                     <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
@@ -40,19 +40,6 @@ export default function Header() {
                             </div>
                         </div>
                     </div>
-
-                    <Disclosure.Panel className="sm:hidden">
-                        <div className="space-y-1 pt-2 pb-4">
-                            <Disclosure.Button
-                                as="a"
-                                href="#"
-                                className="block border-l-4 border-black py-2 pl-3 pr-4 text-base font-medium text-black"
-                            >
-                                Home
-                            </Disclosure.Button>
-                            {/* Add here your custom menu elements */}
-                        </div>
-                    </Disclosure.Panel>
                 </>
             )}
         </Disclosure>
