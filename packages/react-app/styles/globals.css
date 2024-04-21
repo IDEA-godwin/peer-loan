@@ -7,3 +7,12 @@
     font-weight: bold;
     color: #000000;
 }
+
+.footer-icon {
+    color: #000000;
+    opacity: 0.4;
+}
+
+.footer-items:nth-child('odd') {
+    color: black;
+}
