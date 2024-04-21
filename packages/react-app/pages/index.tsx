@@ -22,7 +22,6 @@ export default function Home() {
 
     return (
         <div className="flex flex-col justify-center items-center">
-
             {isConnected ? (
                 <div className="h2 text-center">
                     Your address: {userAddress}
