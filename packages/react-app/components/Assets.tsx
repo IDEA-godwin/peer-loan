@@ -14,8 +14,8 @@ export default function Assets(){
                             <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" viewBox="0 0 24 24">
                                 <path fill="currentColor" d="M12 3.428v6.335l5.357 2.396zm0 0l-5.357 8.73L12 9.764zm0 12.836v4.307l5.357-7.414zm0 4.307v-4.307l-5.357-3.107z" />
                                 <path fill="currentColor" d="m12 15.266l5.357-3.107L12 9.763zm-5.357-3.107L12 15.266V9.763z" />
-                                <path fill="currentColor" fill-rule="evenodd" d="m12 15.266l-5.357-3.107L12 3.428l5.357 8.73zm-5-3.36l4.916-8.01V9.72zm-.073.218l4.989-2.216v5.109zm5.16-2.216v5.109l4.984-2.893zm0-.188l4.916 2.186l-4.916-8.01z" clip-rule="evenodd" />
-                                <path fill="currentColor" fill-rule="evenodd" d="m12 16.196l-5.357-3.043L12 20.57l5.357-7.418zm-4.757-2.508l4.672 2.658v3.814zm4.843 2.658v3.814l4.671-6.472z" clip-rule="evenodd" />
+                                <path fill="currentColor" fillRule="evenodd" d="m12 15.266l-5.357-3.107L12 3.428l5.357 8.73zm-5-3.36l4.916-8.01V9.72zm-.073.218l4.989-2.216v5.109zm5.16-2.216v5.109l4.984-2.893zm0-.188l4.916 2.186l-4.916-8.01z" clip-rule="evenodd" />
+                                <path fill="currentColor" fillRule="evenodd" d="m12 16.196l-5.357-3.043L12 20.57l5.357-7.418zm-4.757-2.508l4.672 2.658v3.814zm4.843 2.658v3.814l4.671-6.472z" clipRule="evenodd" />
                             </svg>
                         </div>
                         <div>

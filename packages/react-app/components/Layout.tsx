@@ -1,20 +1,19 @@
-import { FC, ReactNode } from "react";
+import {FC, ReactNode} from "react";
 import Header from "./Header";
 
 interface Props {
-    children: ReactNode;
+  children: ReactNode;
 }
-const Layout: FC<Props> = ({ children }) => {
-    return (
-        <>
-            <div className="bg-gypsum overflow-hidden min-h-screen">
-                <Header />
-                <div className="">
-                    {children}
-                </div>
-            </div>
-        </>
-    );
+
+const Layout: FC<Props> = ({children}) => {
+  return (
+    <div className="bg-gypsum overflow-hidden min-h-screen">
+      <div className="">
+        {children}
+      </div>
+    </div>
+
+  );
 };
 
 export default Layout;
