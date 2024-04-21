@@ -40,7 +40,7 @@ const navigation = [
 
 export default function Footer() {
   return (
-    <footer className="bg-gypsum mt-auto border-black border-t">
+    <footer className="bg-gypsum mt-auto border-black border-t absolute bottom-0 w-full">
       footer
     </footer>
   )
