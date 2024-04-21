@@ -1,3 +1,4 @@
+import Footer from "@/components/Footer";
 import { useEffect, useState } from "react";
 import { useAccount } from "wagmi";
 
@@ -21,14 +22,20 @@ export default function Home() {
     }
 
     return (
-        <div className="flex flex-col justify-center items-center">
-            {isConnected ? (
-                <div className="h2 text-center">
-                    Your address: {userAddress}
+        <div className="flex h-[100%] flex-col justify-between items-between">
+            <div className="p-4">
+                <div className="flex justify-start items-start">
+                    {isConnected ? (
+                        <div className="h2 text-center">
+                            Your address: {userAddress}
+                        </div>
+                    ) : (
+                        <div>No Wallet Connected</div>
+                    )}
                 </div>
-            ) : (
-                <div>No Wallet Connected</div>
-            )}
+            </div>
+            <Footer />
         </div>
+        
     );
 }
