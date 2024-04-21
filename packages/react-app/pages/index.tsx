@@ -21,7 +21,7 @@ export default function Home() {
     }
 
     return (
-        <div className="flex flex-col justify-center items-center">
+        <div className="p-4">
 
             {isConnected ? (
                 <div className="h2 text-center">
