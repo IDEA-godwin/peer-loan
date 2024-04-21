@@ -3,14 +3,37 @@ import Assets from "@/components/Assets"
 import ExtraDetailsTab from "@/components/ExtraDetailsTab"
 import {useState} from "react"
 
-export default function HomeModule() {
+type IHomeModuleProps = {
+    connectDetails: {userAddress: string, isConnected: boolean}
+}
+
+export default function HomeModule({ connectDetails }:IHomeModuleProps) {
   const [extraDetails, setExtraDetails] = useState("assets")
 
+  function copyAddress(){
+    navigator.clipboard.writeText(connectDetails.userAddress)
+    alert("address copied")
+  }
   return (
     <div>
       <div className="flex flex-col items-center my-12">
         <span className="text-[12px] text-forest">My Balance</span>
         <div className="text-2xl font-bold">$0.00</div>
+        <div className="flex">
+            <div>wallet address: {connectDetails.isConnected && connectDetails.userAddress}</div>
+            {
+                connectDetails.isConnected
+                &&
+                <div onClick={copyAddress}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <g fill="none" stroke="currentColor">
+                            <rect width="9" height="13" x="6.5" y="6.5" rx="1.5" />
+                            <path d="M8.5 6A1.5 1.5 0 0 1 10 4.5h6A1.5 1.5 0 0 1 17.5 6v10a1.5 1.5 0 0 1-1.5 1.5" />
+                        </g>
+                    </svg>
+                </div>
+            }
+        </div>
       </div>
       <div className="flex w-[80%] mx-auto justify-between">
         <ActionTab
@@ -35,7 +58,7 @@ export default function HomeModule() {
           icon={
             <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
               <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                    d="M12 6v13m0-13l4 4m-4-4l-4 4"/>
+                d="M12 6v13m0-13l4 4m-4-4l-4 4"/>
             </svg>
           }
         />
