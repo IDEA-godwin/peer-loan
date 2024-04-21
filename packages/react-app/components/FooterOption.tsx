@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 
 type Props = {
-  click: (page: string) => {};
+  click: (page: string) => void;
   activePage: string;
   optionName: string;
   icon: any

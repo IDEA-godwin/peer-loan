@@ -1,6 +1,6 @@
 
 type Props = {
-  switchPage: (page: string) => {},
+  switchPage: (page: string) => void,
   currentPage: string
 }
 

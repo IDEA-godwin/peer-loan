@@ -22,6 +22,7 @@ export default function Home() {
 
     const switchPage = (page: string) => {
       setCurrentPage(page);
+      return;
     }
 
     if (!isMounted) {
