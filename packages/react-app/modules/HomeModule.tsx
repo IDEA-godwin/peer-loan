@@ -1,4 +1,5 @@
 import ActionTab from "@/components/ActionTab"
+import Assets from "@/components/Assets"
 import ExtraDetailsTab from "@/components/ExtraDetailsTab"
 import {useState} from "react"
 
