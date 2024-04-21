@@ -20,6 +20,10 @@ export default function Home() {
         }
     }, [address, isConnected]);
 
+    const switchPage = (page: string) => {
+      setCurrentPage(page);
+    }
+
     if (!isMounted) {
         return null;
     }
@@ -42,7 +46,7 @@ export default function Home() {
                     <HomeModule />
                 }
             </div>
-            <Footer  />
+            <Footer switchPage={switchPage} currentPage={currentPage} />
         </div>
         
     );

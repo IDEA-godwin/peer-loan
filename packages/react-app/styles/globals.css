@@ -8,9 +8,14 @@
     color: #000000;
 }
 
-.footer-icon {
+.footer-nav-item {
     color: #000000;
     opacity: 0.4;
+}
+
+.active {
+    color: #052c05 !important;
+    opacity: 0.8 !important;
 }
 
 .footer-items:nth-child('odd') {
