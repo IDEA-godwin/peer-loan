@@ -41,7 +41,7 @@ export default function HomeModule() {
         />
       </div>
       <div>
-        <div className="flex justify-between">
+        <div className="flex justify-between my-4">
           <ExtraDetailsTab
             detailName="assets"
             currentDetail={extraDetails}
@@ -52,6 +52,13 @@ export default function HomeModule() {
             currentDetail={extraDetails}
             setDetail={setExtraDetails}
           />
+        </div>
+        <div>
+          {
+            extraDetails == "assets"
+            &&
+            <Assets />
+          }
         </div>
       </div>
     </div>
