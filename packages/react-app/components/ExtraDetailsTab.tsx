@@ -8,7 +8,7 @@ type ExtraDetailsTabProps = {
 
 export default function ExtraDetailsTab({detailName, currentDetail, setDetail}: ExtraDetailsTabProps){
     let [active, setActive] = useState(false)
-    
+
     useEffect(()=>{
         if(detailName === currentDetail){
             setActive(true)
@@ -18,7 +18,7 @@ export default function ExtraDetailsTab({detailName, currentDetail, setDetail}: 
     },[detailName, currentDetail])
 
     return(
-        <div onClick={()=>{setDetail(detailName)}} className={`w-full text-center p-2 capitalize ${active ? "border-b border-black" : ""}`}>
+        <div onClick={()=>{setDetail(detailName)}} className={`w-full text-center p-2 font-medium capitalize ${active ? "border-b border-black text-black" : "text-wood"}`}>
             {detailName}
         </div>
     )
