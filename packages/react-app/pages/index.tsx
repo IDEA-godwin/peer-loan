@@ -33,16 +33,7 @@ export default function Home() {
   return (
     <div className="flex h-[100%] flex-col justify-between items-between">
       <div className="p-4">
-        {/*<div className="flex justify-start items-start">*/}
-        {/*  {isConnected ? (*/}
-        {/*    <div className="h2 text-center">*/}
-        {/*      Your address: {userAddress}*/}
-        {/*    </div>*/}
-        {/*  ) : (*/}
-        {/*    <div className="text-sm">No Wallet Connected</div>*/}
-        {/*  )}*/}
-        {/*</div>*/}
-        { currentPage == "home" && <HomeModule/> }
+        { currentPage == "home" && <HomeModule connectDetails={{userAddress, isConnected}}/> }
         { currentPage == "loan" && <LoanModule /> }
       </div>
       <Footer switchPage={switchPage} currentPage={currentPage}/>
