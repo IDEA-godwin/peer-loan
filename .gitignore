@@ -1,42 +1,24 @@
-node_modules
-.env
-packages/*/.env
-/.editorconfig
-
-# IntelliJ project files
-*.iml
-*.ipr
-*.iws
-.idea
-
-*.gitkeep
-
-# eclipse project file
-.settings/
-.classpath
-.project
-
-# NetBeans specific
-nbproject/private/
-build/
-nbbuild/
-dist/
-nbdist/
-nbactions.xml
-nb-configuration.xml
-
-# The .vscode folder contains launch configuration and tasks you configure in
-# VS Code which you may wish to be included in version control, so this line
-# is commented out by default.
-#.vscode/
-
-# OS
-.DS_Store
-
-# Miscellaneous
-*.class
+# Logs
+logs
 *.log
-*.pyc
-*.swp
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
 
-PROPOSAL.md
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
