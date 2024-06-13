@@ -18,8 +18,7 @@ export const TestnetChainInfo = {
         {
             coinDenom: 'CONST',
             coinMinimalDenom: 'aconst',
-            coinDecimals: 18,
-            gasPriceStep: {low: 0, average: 0.1, high: 0.2},
+            coinDecimals: 18
         }
     ],
     features: ['cosmwasm'],

@@ -60,8 +60,9 @@ function App() {
           funds: [],
         }),
       };
+      client.execute()
       const fee = await client.calculateFee(accounts[0].address, [executeMsg], undefined, 4);
-      const txResult = await client.signAndBroadcast(accounts[0].address, [executeMsg], fee);
+      const txResult = await client.signAndBroadcast(accounts[0].address, [executeMsg], 'auto');
       console.log('Tx Result', txResult);
       if (txResult.code !== undefined && txResult.code !== 0) {
         alert("Failed to send tx: " + txResult.rawLog);
