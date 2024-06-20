@@ -1,10 +1,20 @@
+
+const currency = {
+    coinDenom: 'CONST',
+    coinMinimalDenom: 'aconst',
+    coinDecimals: 18,
+    coinGeckoId: 'constantine-network',
+};
+
 export const TestnetChainInfo = {
     chainId: 'constantine-3',
-    chainName: 'Constantine Testnet',
+    chainName: 'Constantine',
     rpc: 'https://rpc.constantine.archway.io',
     rest: 'https://api.constantine.archway.io',
-    stakeCurrency: {coinDenom: 'CONST', coinMinimalDenom: 'aconst', coinDecimals: 18},
-    bip44: {coinType: 118},
+    stakeCurrency: currency,
+    bip44: {
+        coinType: 118,
+    },
     bech32Config: {
         bech32PrefixAccAddr: 'archway',
         bech32PrefixAccPub: 'archwaypub',
@@ -13,13 +23,9 @@ export const TestnetChainInfo = {
         bech32PrefixConsAddr: 'archwayvalcons',
         bech32PrefixConsPub: 'archwayvalconspub',
     },
-    currencies: [{coinDenom: 'CONST', coinMinimalDenom: 'aconst', coinDecimals: 18}],
-    feeCurrencies: [
-        {
-            coinDenom: 'CONST',
-            coinMinimalDenom: 'aconst',
-            coinDecimals: 18
-        }
-    ],
-    features: ['cosmwasm'],
+    currencies: [currency],
+    feeCurrencies: [currency],
+    // coinType: 118,
+    features: ['cosmwasm', 'ibc-transfer', 'ibc-go'],
+    // walletUrlForStaking: '',
 };
