@@ -271,6 +271,10 @@ a.text-muted:hover, a.text-heading:hover, a.text-current:hover {
     box-shadow: 0 16px 16px -1px rgba(10, 22, 70, .1), 0 0 1px rgba(10, 22, 70, .06) !important
 }
 
+.shadow-4-hover:hover {
+    box-shadow: 0 16px 16px -1px rgba(10, 22, 70, .1), 0 0 1px rgba(10, 22, 70, .06) !important
+}
+
 .shadow-5 {
     box-shadow: 0 32px 40px -2px rgba(10, 22, 70, .1), 0 0 1px rgba(10, 22, 70, .06) !important
 }

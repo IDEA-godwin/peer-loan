@@ -22,10 +22,6 @@ const Navbar = () => (
           <img
             src="https://satoshi.webpixels.io/img/logos/logo-dark.svg"
             className="logo-dark h-rem-8 h-rem-md-10" alt="..."/>
-          <img
-            src="https://satoshi.webpixels.io/img/logos/logo-light.svg"
-            className="logo-light h-rem-8 h-rem-md-10"
-            alt="..."/>
         </a>
         <div className="navbar-user d-lg-none">
           <div className="dropdown">
@@ -93,7 +89,7 @@ const Navbar = () => (
                   isActive ? "active " : "", "nav-link d-flex align-items-center rounded-pill"
                 ].join("")}
               >
-                <i className="bi bi-house-fill"></i> <span>Dashboards</span>
+                <i className="bi bi-cash"></i> <span>Loans</span>
               </NavLink>
             </li>
             <li className="nav-item my-1">

@@ -1,9 +1,8 @@
-import {createBrowserRouter, Outlet, RouterProvider} from "react-router-dom";
-import DashboardPage from "./pages/dashboard.tsx";
+import {createBrowserRouter, Navigate, Outlet, RouterProvider} from "react-router-dom";
 import ProfilePage from "./pages/profile.tsx";
 import Navbar from "./components/navbar.tsx";
 import WalletConnect from "./components/wallet-connect.tsx";
-import Loans from "./pages/loans.tsx";
+import LoansPage from "./pages/loans.tsx";
 
 const AppLayout = () => (
   <main className="d-flex flex-column flex-lg-row h-lg-100 gap-1">
@@ -23,7 +22,7 @@ const AppLayout = () => (
 const appRoutes = [
   {
     path: "/",
-    element: <DashboardPage />
+    element: <Navigate to="/loans" replace />
   },
   {
     path: "/profile",
@@ -31,7 +30,7 @@ const appRoutes = [
   },
   {
     path: "/loans",
-    element: <Loans />
+    element: <LoansPage />
   }
 ]
 
