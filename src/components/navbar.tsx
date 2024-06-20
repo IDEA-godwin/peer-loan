@@ -20,10 +20,10 @@ const Navbar = () => (
         </button>
         <a className="navbar-brand d-inline-block py-lg-1 mb-lg-5" href="/">
           <img
-            src="https://satoshi.webpixels.io/img/logos/logo-dark.svg"
+            src="../src/assets/img/peerloans-dark-mode.svg"
             className="logo-dark h-rem-8 h-rem-md-10" alt="..."/>
           <img
-            src="https://satoshi.webpixels.io/img/logos/logo-light.svg"
+            src="../src/assets/img/peerloans-light-mode.svg"
             className="logo-light h-rem-8 h-rem-md-10"
             alt="..."/>
         </a>
