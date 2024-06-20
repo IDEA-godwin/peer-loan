@@ -205,7 +205,7 @@ export default function LoansPage() {
                           <div className="d-flex justify-content-end align-items-center gap-1">
                             <span
                               className={`border rounded-pill px-2 py-1 text-capitalize text-xs 
-                              ${loan.status == 'open' ? 'bg-info-subtle' 
+                              ${loan.status == 'open' ? 'bg-secondary-subtle' 
                                 : loan.status == 'active' ? 'bg-success-subtle' : 'bg-danger-subtle'}`}
                             >
                               {loan.status}
