@@ -4,6 +4,7 @@ import {SigningArchwayClient} from "@archwayhq/arch3.js";
 import {proposeLoanDisbursement, queryLoanOffers} from "../services/contract-service.ts";
 import { TestnetChainInfo as chainInfo} from "../configs/ChainInfo.ts";
 import {SubmitHandler, useForm} from "react-hook-form";
+import {useOutletContext} from "react-router";
 
 interface IFormInput {
   title: string;
@@ -20,10 +21,11 @@ enum LoanOffer {
 
 
 export default function LoansPage() {
+  const [walletConnected] = useOutletContext<Array<any>>();
   const [client, setClient] = useState<SigningArchwayClient>()
   const [signerAddress, setSignerAddress] = useState<string>('')
 
-  const [loans, setLoans] = useState<Array<any>>([])
+  const [loans, setLoans] = useState<Array<any>>()
 
   const {
     register,
@@ -32,16 +34,17 @@ export default function LoansPage() {
 
   useEffect(() => {
     async function buildClient() {
-      if (localStorage.getItem("wallet_connected") && window.getOfflineSigner) {
-        const offlineSigner = await window.getOfflineSigner(chainInfo.chainId)
-        const client = await SigningArchwayClient.connectWithSigner(chainInfo.rpc, offlineSigner)
-        const accounts = await offlineSigner.getAccounts()
-        setSignerAddress(accounts[0].address);
-        setClient(client)
-      }
+      if (!window.getOfflineSigner) { alert("Install Keplr to get access of the functions provided"); return }
+      const offlineSigner = await window.getOfflineSigner(chainInfo.chainId)
+      const client = await SigningArchwayClient.connectWithSigner(chainInfo.rpc, offlineSigner)
+      const accounts = await offlineSigner.getAccounts()
+      setSignerAddress(accounts[0].address);
+      setClient(client)
     }
-    buildClient();
-  }, []);
+    if (walletConnected) {
+      buildClient();
+    } else { alert("Please connect your wallet") }
+  }, [walletConnected]);
 
   useEffect(() => {
     if (client) {
@@ -226,6 +229,12 @@ export default function LoansPage() {
                       </div>
                     </div>
                 )
+              }
+              {
+                !loans && <div>Confirm your wallet is connected and you have active internet service!</div>
+              }
+              {
+                loans?.length == 0 && <div>No open proposal yet, be the first!!</div>
               }
             </div>
           </div>

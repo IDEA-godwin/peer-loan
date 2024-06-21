@@ -22,10 +22,6 @@ const Navbar = () => (
           <img
             src="src/assets/img/peerloans-dark-mode.svg"
             className="logo-dark h-rem-8 h-rem-md-10" alt="..."/>
-          <img
-            src="src/assets/img/peerloans-light-mode.svg"
-            className="logo-light h-rem-8 h-rem-md-10"
-            alt="..."/>
         </a>
         <div className="navbar-user d-lg-none">
           <div className="dropdown">

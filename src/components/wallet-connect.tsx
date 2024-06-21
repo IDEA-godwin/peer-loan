@@ -3,10 +3,9 @@ import {TestnetChainInfo as chainInfo} from "../configs/ChainInfo.ts";
 import {Key} from "@keplr-wallet/types";
 
 
-export default function WalletConnect() {
+export default function WalletConnect({walletConnected, setWalletConnected}: any) {
 
   const [key, setKey] = useState<Key>()
-  const [walletConnected, setWalletConnected] = useState(false)
 
   useEffect(() => {
     if (localStorage.getItem('wallet_connected')) connectWallet();
