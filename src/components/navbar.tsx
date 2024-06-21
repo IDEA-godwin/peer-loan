@@ -1,5 +1,7 @@
 import {NavLink} from "react-router-dom";
 
+import logo from '../assets/img/peerloans-dark-mode.svg';
+
 const Navbar = () => (
   <>
     <nav
@@ -20,7 +22,7 @@ const Navbar = () => (
         </button>
         <a className="navbar-brand d-inline-block py-lg-1 mb-lg-5" href="/">
           <img
-            src="src/assets/img/peerloans-dark-mode.svg"
+            src={logo}
             className="logo-dark h-rem-8 h-rem-md-10" alt="..."/>
         </a>
         <div className="navbar-user d-lg-none">
