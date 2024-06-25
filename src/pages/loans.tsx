@@ -118,7 +118,7 @@ export default function LoansPage() {
       </div>
       <div
         className="modal fade" id="proposalModal" aria-hidden="true"
-        tabIndex={-1} aria-labelledby="cryptoModalLabel"
+        tabIndex={-1} aria-labelledby="propsalModal"
       >
         <div className="modal-dialog modal-dialog-centered">
           <div className="modal-content overflow-hidden">
