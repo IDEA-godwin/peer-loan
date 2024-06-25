@@ -1,4 +1,4 @@
-import {createBrowserRouter, Navigate, Outlet, RouterProvider} from "react-router-dom";
+import {createBrowserRouter, Outlet, RouterProvider} from "react-router-dom";
 import ProfilePage from "./pages/profile.tsx";
 import Navbar from "./components/navbar.tsx";
 import WalletConnect from "./components/wallet-connect.tsx";
@@ -6,7 +6,7 @@ import LoansPage from "./pages/loans.tsx";
 import {useState} from "react";
 
 const AppLayout = () => {
-  const [walletConnected, setWalletConnected] = useState(false);
+  const [walletConnected, setWalletConnected] = useState(localStorage.getItem('wallet_connected'));
   return (
     <main className="d-flex flex-column flex-lg-row h-lg-100 gap-1">
       <Navbar/>
@@ -26,16 +26,12 @@ const AppLayout = () => {
 const appRoutes = [
   {
     path: "/",
-    element: <Navigate to="/loans" replace/>
+    element: <LoansPage/>
   },
   {
     path: "/profile",
     element: <ProfilePage/>
   },
-  {
-    path: "/loans",
-    element: <LoansPage/>
-  }
 ]
 
 const routes = createBrowserRouter([
