@@ -72,3 +72,83 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.cardpro{
+  border:none;
+
+  position:relative;
+  overflow:hidden;
+  border-radius:8px;
+  cursor:pointer;
+}
+
+.cardpro:before{
+  
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  width:4px;
+  height:100%;
+  background-color:#E1BEE7;
+  transform:scaleY(1);
+  transition:all 0.5s;
+  transform-origin: bottom
+}
+
+.cardpro:after{
+  
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  width:4px;
+  height:100%;
+  background-color:#211056;
+  transform:scaleY(0);
+  transition:all 0.5s;
+  transform-origin: bottom
+}
+
+.cardpro:hover::after{
+  transform:scaleY(1);
+}
+
+
+.fonts{
+  font-size:11px;
+}
+
+.social-list{
+  display:flex;
+  list-style:none;
+  justify-content:center;
+  padding:0;
+}
+
+.social-list li{
+  padding:10px;
+  color:#211056;
+  font-size:19px;
+}
+
+
+.buttons button:nth-child(1){
+     border:1px solid #211056 !important;
+     color:#211056;
+     height:40px;
+}
+
+.buttons button:nth-child(1):hover{
+     border:1px solid #211056 !important;
+     color:#fff;
+     height:40px;
+     background-color:#211056;
+}
+
+.buttons button:nth-child(2){
+     border:1px solid #211056 !important;
+     background-color:#211056;
+     color:#fff;
+      height:40px;
+}
